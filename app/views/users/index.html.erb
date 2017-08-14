@@ -1,0 +1,15 @@
+<h1>Users#index</h1>
+
+<!-- ff para form tab -->
+<%= form_for [@group, User.new] do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<%= f.submit "Crear Usuario" %>	
+<% end %>
+
+<ul>
+	<% @users.each do |user| %>
+		<li><%= user.name %></li>
+	<% end %>
+</ul>
+  
